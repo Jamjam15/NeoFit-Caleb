@@ -59,9 +59,10 @@
                 <p>Welcome back! Log in using your email and password.</p>
 
 
-                <form action="" class="email-pass">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
+                <form action="login.php" class="email-pass" method="POST">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit" name="submit" class="login-button">Login</button>
                 </form>
                 
                 <div class="forgot-container">
@@ -69,7 +70,7 @@
                 </div>
                 
                 <p class="signing">By signing up, I accept NeoFit's Privacy Policy and Legal Statement.</p>
-                <button type="submit" class="login-button">Login</button>
+                
             </div>
 
             
