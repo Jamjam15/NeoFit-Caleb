@@ -1,3 +1,7 @@
+<?php 
+    include("connection.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,20 +47,15 @@
             </div>
             
             <p class="auth-subtitle">Create an account for a better shopping experience!</p>
-            <form class="email-pass">
-                <select class="title-select">
-                    <option value="" disabled selected hidden>Title</option>
-                    <option value="Mr.">Mr.</option>
-                    <option value="Ms.">Ms.</option>
-                    <option value="Mrs.">Mrs.</option>
-                </select>
-                <input type="text" placeholder="First Name" required>
-                <input type="text" placeholder="Last Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <p>By signing up, I accept NeoFit's Privacy Policy and Legal Statement.</p>
-                <button type="submit" class="sign-up-button">Sign Up</button>
+
+            <form class="email-pass" action="signup.php" method="POST">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="submit" class="sign-up-button">Sign Up</button>
             </form>
+            
 
             <div class="footer">
                 <span>Contact US</span>
